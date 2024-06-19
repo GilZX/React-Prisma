@@ -1,12 +1,8 @@
 
 
-export default function TollBarButton({children}){
+export default function TollBarButton({children,onSelected,isSelected}){
 
 
-    function HandlerClick(){
-        console.log("Hello Wordl By React and Vite.")
-    }
 
-
-   return <li><button onClick={HandlerClick}>{children}</button></li>
+   return <li><button className={isSelected ? "active":""} onClick={onSelected}>{children}</button></li>
 }
